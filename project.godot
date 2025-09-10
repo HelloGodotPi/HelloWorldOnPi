@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Hello World Pi"
+config/description="Welcome to this 'Hello World' project on Raspberry Pi, featuring examples of how to use GDScript for a minimalist 3D game and remote game control."
+run/main_scene="uid://bq8aik4a0qvts"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=512
+window/size/borderless=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
+
+[input_devices]
+
+pointing/android/enable_long_press_as_right_click=true
+pointing/android/enable_pan_and_scale_gestures=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 0)
+
+[xr]
+
+shaders/enabled=true

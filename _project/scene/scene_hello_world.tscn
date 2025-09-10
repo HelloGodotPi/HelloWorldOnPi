@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq8aik4a0qvts"]
+
+[ext_resource type="Script" uid="uid://ct52l8t2630cq" path="res://_project/script/gd_hello_world.gd" id="1_pj43q"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pj43q"]
+
+[node name="SceneHelloWorld" type="Node3D"]
+
+[node name="Node Say Hello World" type="Node" parent="."]
+script = ExtResource("1_pj43q")
+
+[node name="MeshInstance3D Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.262987, 0, 0, 0, 1, 0, -0.138746, 0)
+mesh = SubResource("BoxMesh_pj43q")
+
+[node name="MeshInstance3D Table" type="MeshInstance3D" parent="MeshInstance3D Ground"]
+transform = Transform3D(0.582442, 0, 0, 0, 0.232697, 0, 0, 0, 0.31291, 0, 0.998936, 0)
+mesh = SubResource("BoxMesh_pj43q")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.858924, 0.512103, 0, -0.512103, 0.858924, 0, 0.585408, 0.987381)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.46548, -2.03467e-08)
